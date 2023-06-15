@@ -26,6 +26,10 @@ function generatePassword(){
 
   //ask for lenght of password
   var pswC_lenght = window.prompt(`How many characters should the password have?\nselecte a number between 8-128 characters`, "16");
+  if(pswC_lenght < 8 || pswC_lenght > 128){
+    window.alert("Please select between 8 and 128!");
+        return;
+  }
 
 
   //ask for criteria & add characters to characterOptions to pick from
