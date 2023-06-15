@@ -60,7 +60,7 @@ function generatePassword(){
   }
 
  
-  //generate random password
+  //generate random password based on characterOptions and user prompted password length
   for (var i = 0; i < pswC_lenght; i++ ){
     passwordMaker = passwordMaker + 
     characterOptions[
