@@ -4,6 +4,10 @@ var psw_numbers = ["1","2","3","4","5","6","7","8","9","0"];
 var psw_alphabet = ["a","b","c","d","e","g","h","i","j","k","L","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];  
 var psw_special = ["!","?","#","$","&","%","(",")","*","+","{","}","@"];
 
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -15,7 +19,7 @@ function writePassword() {
 
 function generatePassword(){
 
-  var password = "";
+  var passwordMaker = "";
   //ask for criteria
   var pswC_lowercase = window.confirm("Do you want to include lower case characters?");
   var pswC_uppercase = window.confirm("Do you want to include upper case characters?");
@@ -25,16 +29,12 @@ function generatePassword(){
 
   //generate random password
   for (var i = 0; i < pswC_lenght; i++ ){
-    password = password + psw_alphabet[i];
+    passwordMaker = passwordMaker + psw_alphabet[randomAlphabetIndex()];
   }
-
-  console.log(password);
-  return (password);
+  return (passwordMaker);
 }
 
-
-
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", generatePassword);
-
+function randomAlphabetIndex(){
+  var random_alphabet_index = Math.floor(Math.random()*psw_alphabet.length);
+  return (random_alphabet_index);
+}
