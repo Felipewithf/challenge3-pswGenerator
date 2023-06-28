@@ -1,4 +1,4 @@
-# Challenge3-Password Generator
+# Password Generator
 
 Generate your own password with window prompts
 
