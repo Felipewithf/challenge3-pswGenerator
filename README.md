@@ -1,6 +1,6 @@
 # Challenge3-Password Generator
 
-Bootcamp -Third Challenge
+Generate your own password with window prompts
 
 ## Description
 
